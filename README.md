@@ -155,18 +155,3 @@ dbt test           # run data quality tests
 
 ---
 
-## Data Quality Tests
-
-Generic tests defined in `properties.yml`:
-- `unique` and `not_null` on primary keys across all silver models
-- `relationships` tests for referential integrity between bookings → listings and bookings → hosts
-- `accepted_values` on categorical columns like `booking_status`
-
----
-
-## Notes
-
-- `profiles.yml` is excluded from version control — credentials are never committed
-- `target/` and `logs/` are excluded from version control
-- Bronze models are intentionally kept as views — no storage cost, always reflects staging as-is
-- The OBT uses hardcoded Snowflake paths rather than `ref()` for the fact table joins due to the snapshot tables being created outside the dbt run graph
