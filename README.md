@@ -72,7 +72,7 @@ aws_dbt_snowflakeproject/
 
 **Source data:** Airbnb listings, hosts, and bookings CSVs loaded into `AIRBNB.STAGING`.
 
-**Bronze** — straight `SELECT *` from each staging table, materialised as views. No transformation, just lineage entry point.
+**Bronze** — straight `SELECT *` from each staging table, materialised as table. No transformation, just lineage entry point.
 
 **Silver** — three incremental models (`silver_bookings`, `silver_listings`, `silver_hosts`) using merge strategy with `unique_key`. Type casting, null handling, and deduplication happen here.
 
