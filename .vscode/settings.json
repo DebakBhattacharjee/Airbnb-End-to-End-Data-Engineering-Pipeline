@@ -1,0 +1,4 @@
+{
+  "dbt.dbtPythonPathOverride": "C:\\AWS_DBT_Snowflake\\.venv\\Scripts\\python.exe",
+  "dbt.perspectiveTheme": "Monokai"
+}
